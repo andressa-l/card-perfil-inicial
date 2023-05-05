@@ -9,13 +9,22 @@
 }
 
 body {
-    background-color: hsl(214, 63%, 38%);
-    height: 100vh;
+    background-color: var(--background-color);
+    background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: right 45vw bottom 45vh, 45vw 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     font-family: 'Kumbh Sans', sans-serif;
+    overflow: hidden;
 }
 
-hr{
+.linha-horizontal {
     width: 100%;
+    border-bottom: 1px solid var(--card-color);
 }
 
 .cartao {
@@ -25,10 +34,13 @@ hr{
     justify-content: space-between;
     gap: 25px;
     background-color: #fff;
+    background-image: url(../images/bg-pattern-card.svg);
+    background-position: top;
+    background-repeat: no-repeat;
     border-radius: 10px;
     margin: 20px;
-    width: 330px;
-    height: 350px;
+    width: 340px;
+    height: 380px;
 }
 
 .cartao .informacoes-perfil{
@@ -37,33 +49,44 @@ hr{
     justify-content: space-around;
     text-align: center;
     height: 100%;
+    padding-top: 75px;
 }
 
 
 .cartao .informacoes-perfil img {
     max-width: 100%;
     height: auto;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 50%;
     display: block;
+    border: 6px solid #fff
 }
 
 
 .cartao .informacoes{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
     padding-bottom: 30px;
+    justify-content: space-evenly;
+    width: 80%;
     text-align: center;
 }
+ 
+.info {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
 
-.informacoes .info .style1,
-.cartao .informacoes-perfil {
+p {
     font-weight: 700;
 }
+
+span {
+    font-weight: 400;
+    margin-top: 6px;
+}
+
 .cartao .informacoes-perfil .informacao-especifica,
 .cartao .informacoes-perfil .local,
 .informacoes .info .style2 {
@@ -71,21 +94,20 @@ hr{
     
 }
 
-/* .informacoes .style1 {
+
+.informacoes .style1 {
     text-decoration-color: hsl(227, 10%, 46%);
     font-family: 'Fira Code', monospace;
-    font-weight: 700;
-    flex-wrap: wrap;
-    width: 50%;
-    color: black;
+    font-size: 21px;
+    /* width: 50%; */
+    color: hsl(225, 8%, 20%);
 }
 
 .informacoes .style2 {
     font-family: 'Fira Code', monospace;
-    font-weight: 500;
-    flex-wrap: wrap;
-    width: 50%;
+    font-size: 12px;
+    /* width: 50%; */
     color:  hsl(227, 10%, 46%);
    
-} */
+}
 
